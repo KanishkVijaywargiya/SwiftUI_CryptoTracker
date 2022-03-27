@@ -19,6 +19,8 @@ struct HomeView: View {
             // content layer
             VStack {
                 homeHeader
+                HomeStatsView(showPortfolio: $showPortfolio)
+                SearchBarView(searchText: $vm.searchText)
                 columnTitles
                 
                 if !showPortfolio {
@@ -62,6 +64,8 @@ extension HomeView {
                 .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
                 .onTapGesture {
                     withAnimation(.spring()) {
+                        HapticManager.instance.notification(type: .success)
+                        HapticManager.instance.impact(style: .heavy)
                         showPortfolio.toggle()
                     }
                 }

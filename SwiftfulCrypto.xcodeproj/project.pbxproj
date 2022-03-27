@@ -16,6 +16,14 @@
 		04685D0327EB30CB00643792 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685D0227EB30CB00643792 /* CircleButtonView.swift */; };
 		04685D0527EB382B00643792 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685D0427EB382B00643792 /* CircleButtonAnimationView.swift */; };
 		04685D0827EB3C9F00643792 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685D0727EB3C9F00643792 /* CoinModel.swift */; };
+		04A2A96027F05E64004AD11D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A95F27F05E64004AD11D /* SearchBarView.swift */; };
+		04A2A96227F06171004AD11D /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A96127F06171004AD11D /* HapticsManager.swift */; };
+		04A2A96427F06470004AD11D /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A96327F06470004AD11D /* UIApplication.swift */; };
+		04A2A96627F0780C004AD11D /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A96527F0780C004AD11D /* StatisticModel.swift */; };
+		04A2A96827F07971004AD11D /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A96727F07971004AD11D /* StatisticView.swift */; };
+		04A2A96A27F07D7B004AD11D /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A96927F07D7B004AD11D /* HomeStatsView.swift */; };
+		04A2A96C27F081DA004AD11D /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A96B27F081DA004AD11D /* MarketDataModel.swift */; };
+		04A2A96E27F08701004AD11D /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A96D27F08701004AD11D /* MarketDataService.swift */; };
 		04B7A11B27EDE5AE0081C2F3 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7A11A27EDE5AE0081C2F3 /* CoinDataService.swift */; };
 		04B7A11E27EEF7650081C2F3 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7A11D27EEF7650081C2F3 /* NetworkingManager.swift */; };
 		04B7A12127EF0E170081C2F3 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7A12027EF0E170081C2F3 /* CoinImageView.swift */; };
@@ -39,6 +47,14 @@
 		04685D0227EB30CB00643792 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		04685D0427EB382B00643792 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		04685D0727EB3C9F00643792 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		04A2A95F27F05E64004AD11D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		04A2A96127F06171004AD11D /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		04A2A96327F06470004AD11D /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		04A2A96527F0780C004AD11D /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
+		04A2A96727F07971004AD11D /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		04A2A96927F07D7B004AD11D /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
+		04A2A96B27F081DA004AD11D /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
+		04A2A96D27F08701004AD11D /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		04B7A11A27EDE5AE0081C2F3 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		04B7A11D27EEF7650081C2F3 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		04B7A12027EF0E170081C2F3 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
@@ -108,6 +124,7 @@
 				04685CF827EAFAEB00643792 /* Color.swift */,
 				04C8FA8327EC77A0007AC177 /* PreviewProvider.swift */,
 				04C8FA8527EC7C7F007AC177 /* Double.swift */,
+				04A2A96327F06470004AD11D /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -134,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				04685CFE27EB2FC400643792 /* HomeView.swift */,
+				04A2A96927F07D7B004AD11D /* HomeStatsView.swift */,
 				04C8FA8127EC771E007AC177 /* CoinRowView.swift */,
 			);
 			path = Views;
@@ -152,6 +170,8 @@
 			children = (
 				04B7A11F27EF0DFE0081C2F3 /* CoinImage */,
 				04685D0127EB30BA00643792 /* CircleButton */,
+				04A2A95F27F05E64004AD11D /* SearchBarView.swift */,
+				04A2A96727F07971004AD11D /* StatisticView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -169,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				04685D0727EB3C9F00643792 /* CoinModel.swift */,
+				04A2A96527F0780C004AD11D /* StatisticModel.swift */,
+				04A2A96B27F081DA004AD11D /* MarketDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +200,7 @@
 			children = (
 				04B7A11A27EDE5AE0081C2F3 /* CoinDataService.swift */,
 				04B7A12227EF112B0081C2F3 /* CoinImageService.swift */,
+				04A2A96D27F08701004AD11D /* MarketDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -187,6 +210,7 @@
 			children = (
 				04B7A11D27EEF7650081C2F3 /* NetworkingManager.swift */,
 				04B7A12627EF26A20081C2F3 /* LocalFileManager.swift */,
+				04A2A96127F06171004AD11D /* HapticsManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -271,21 +295,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B7A11B27EDE5AE0081C2F3 /* CoinDataService.swift in Sources */,
+				04A2A96627F0780C004AD11D /* StatisticModel.swift in Sources */,
 				04C8FA8227EC771E007AC177 /* CoinRowView.swift in Sources */,
 				04C8FA8827ECA349007AC177 /* HomeViewModel.swift in Sources */,
 				04685CEA27EAF83E00643792 /* ContentView.swift in Sources */,
+				04A2A96E27F08701004AD11D /* MarketDataService.swift in Sources */,
 				04B7A12727EF26A20081C2F3 /* LocalFileManager.swift in Sources */,
 				04685CFF27EB2FC400643792 /* HomeView.swift in Sources */,
+				04A2A96C27F081DA004AD11D /* MarketDataModel.swift in Sources */,
 				04B7A12127EF0E170081C2F3 /* CoinImageView.swift in Sources */,
 				04685CE827EAF83E00643792 /* SwiftfulCryptoApp.swift in Sources */,
+				04A2A96827F07971004AD11D /* StatisticView.swift in Sources */,
+				04A2A96427F06470004AD11D /* UIApplication.swift in Sources */,
 				04685D0327EB30CB00643792 /* CircleButtonView.swift in Sources */,
 				04685CF927EAFAEB00643792 /* Color.swift in Sources */,
+				04A2A96A27F07D7B004AD11D /* HomeStatsView.swift in Sources */,
+				04A2A96027F05E64004AD11D /* SearchBarView.swift in Sources */,
 				04B7A11E27EEF7650081C2F3 /* NetworkingManager.swift in Sources */,
 				04685D0527EB382B00643792 /* CircleButtonAnimationView.swift in Sources */,
 				04B7A12527EF15000081C2F3 /* CoinImageViewModel.swift in Sources */,
 				04C8FA8427EC77A0007AC177 /* PreviewProvider.swift in Sources */,
 				04C8FA8627EC7C7F007AC177 /* Double.swift in Sources */,
 				04B7A12327EF112B0081C2F3 /* CoinImageService.swift in Sources */,
+				04A2A96227F06171004AD11D /* HapticsManager.swift in Sources */,
 				04685D0827EB3C9F00643792 /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
