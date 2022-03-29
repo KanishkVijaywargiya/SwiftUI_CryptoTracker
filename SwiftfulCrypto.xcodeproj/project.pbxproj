@@ -16,6 +16,9 @@
 		04685D0327EB30CB00643792 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685D0227EB30CB00643792 /* CircleButtonView.swift */; };
 		04685D0527EB382B00643792 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685D0427EB382B00643792 /* CircleButtonAnimationView.swift */; };
 		04685D0827EB3C9F00643792 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04685D0727EB3C9F00643792 /* CoinModel.swift */; };
+		046C5EB327F3026F00080C3C /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C5EB227F3026F00080C3C /* PortfolioView.swift */; };
+		046C5EB527F3052D00080C3C /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C5EB427F3052D00080C3C /* XMarkButton.swift */; };
+		046C5EB727F30FE300080C3C /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C5EB627F30FE300080C3C /* CoinLogoView.swift */; };
 		04A2A96027F05E64004AD11D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A95F27F05E64004AD11D /* SearchBarView.swift */; };
 		04A2A96227F06171004AD11D /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A96127F06171004AD11D /* HapticsManager.swift */; };
 		04A2A96427F06470004AD11D /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2A96327F06470004AD11D /* UIApplication.swift */; };
@@ -47,6 +50,9 @@
 		04685D0227EB30CB00643792 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		04685D0427EB382B00643792 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		04685D0727EB3C9F00643792 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		046C5EB227F3026F00080C3C /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		046C5EB427F3052D00080C3C /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
+		046C5EB627F30FE300080C3C /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
 		04A2A95F27F05E64004AD11D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		04A2A96127F06171004AD11D /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		04A2A96327F06470004AD11D /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 				04685CFE27EB2FC400643792 /* HomeView.swift */,
 				04A2A96927F07D7B004AD11D /* HomeStatsView.swift */,
 				04C8FA8127EC771E007AC177 /* CoinRowView.swift */,
+				046C5EB227F3026F00080C3C /* PortfolioView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +179,7 @@
 				04685D0127EB30BA00643792 /* CircleButton */,
 				04A2A95F27F05E64004AD11D /* SearchBarView.swift */,
 				04A2A96727F07971004AD11D /* StatisticView.swift */,
+				046C5EB427F3052D00080C3C /* XMarkButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			children = (
 				04B7A12027EF0E170081C2F3 /* CoinImageView.swift */,
 				04B7A12427EF15000081C2F3 /* CoinImageViewModel.swift */,
+				046C5EB627F30FE300080C3C /* CoinLogoView.swift */,
 			);
 			path = CoinImage;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 				04C8FA8827ECA349007AC177 /* HomeViewModel.swift in Sources */,
 				04685CEA27EAF83E00643792 /* ContentView.swift in Sources */,
 				04A2A96E27F08701004AD11D /* MarketDataService.swift in Sources */,
+				046C5EB727F30FE300080C3C /* CoinLogoView.swift in Sources */,
 				04B7A12727EF26A20081C2F3 /* LocalFileManager.swift in Sources */,
 				04685CFF27EB2FC400643792 /* HomeView.swift in Sources */,
 				04A2A96C27F081DA004AD11D /* MarketDataModel.swift in Sources */,
@@ -308,6 +318,7 @@
 				04A2A96827F07971004AD11D /* StatisticView.swift in Sources */,
 				04A2A96427F06470004AD11D /* UIApplication.swift in Sources */,
 				04685D0327EB30CB00643792 /* CircleButtonView.swift in Sources */,
+				046C5EB527F3052D00080C3C /* XMarkButton.swift in Sources */,
 				04685CF927EAFAEB00643792 /* Color.swift in Sources */,
 				04A2A96A27F07D7B004AD11D /* HomeStatsView.swift in Sources */,
 				04A2A96027F05E64004AD11D /* SearchBarView.swift in Sources */,
@@ -319,6 +330,7 @@
 				04B7A12327EF112B0081C2F3 /* CoinImageService.swift in Sources */,
 				04A2A96227F06171004AD11D /* HapticsManager.swift in Sources */,
 				04685D0827EB3C9F00643792 /* CoinModel.swift in Sources */,
+				046C5EB327F3026F00080C3C /* PortfolioView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +469,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,7 +499,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
