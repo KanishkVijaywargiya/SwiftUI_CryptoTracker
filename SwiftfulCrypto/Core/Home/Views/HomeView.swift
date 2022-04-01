@@ -88,6 +88,14 @@ extension HomeView {
             Text(showPortfolio ? "Holdings" : "").animation(.easeIn, value: showPortfolio)
             Text("Price")
                 .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            
+            Button(action: {
+                withAnimation(.linear(duration: 2)) {
+                    vm.reloadData()
+                }
+            }) {
+                Image(systemName: "goforward")
+            }.rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
@@ -101,6 +109,9 @@ extension HomeView {
             }
         }
         .listStyle(PlainListStyle())
+        .refreshable {
+            vm.reloadData()
+        }
     }
     private var portfolioCoinsList: some View {
         List {
