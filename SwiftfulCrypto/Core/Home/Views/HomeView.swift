@@ -11,6 +11,7 @@ struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio: Bool = false // animating right
     @State private var showPortfolioView: Bool = false // new sheet
+    @State private var showSettingsView: Bool = false
     @State private var showDetailView: Bool = false
     @State var selectedCoin: CoinModel? = nil
     
@@ -39,6 +40,9 @@ struct HomeView: View {
                 
                 Spacer(minLength: 0)
             }
+            .sheet(isPresented: $showSettingsView) {
+                SettingsView()
+            }
         }
         .background(
             NavigationLink(destination: DetailLoadingView(coin: $selectedCoin), isActive: $showDetailView) {
@@ -65,7 +69,7 @@ extension HomeView {
                 .onTapGesture(perform: {
                     HapticManager.instance.notification(type: .success)
                     HapticManager.instance.impact(style: .heavy)
-                    showPortfolioView.toggle()
+                    showPortfolio ? showPortfolioView.toggle() : showSettingsView.toggle()
                 })
                 .background(
                     CircleButtonAnimationView(animate: $showPortfolio)
