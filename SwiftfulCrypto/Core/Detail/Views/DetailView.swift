@@ -21,6 +21,9 @@ struct DetailLoadingView: View {
 
 struct DetailView: View {
     @StateObject private var vm: DetailViewModel
+    @State private var showFullDescription: Bool = false
+    @State var websiteLink: Bool = false
+    @State var redditLink: Bool = false
     
     private let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -33,17 +36,22 @@ struct DetailView: View {
     }
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 ChartView(coin: vm.coin).padding(.vertical)
                 VStack(spacing: 20) {
                     overviewTitle
                     Divider()
+                    
+                    descriptionSection
+                    
                     overviewGrid
                     
                     additionalTitle
                     Divider()
                     additionalGrid
+                    
+                    websiteSection
                 }
                 .padding()
             }
@@ -72,6 +80,32 @@ extension DetailView {
             .bold()
             .foregroundColor(Color.theme.accent)
             .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    private var descriptionSection: some View {
+        ZStack {
+            if let coinDescription = vm.coinDescription, !coinDescription.isEmpty {
+                VStack(alignment: .leading) {
+                    Text(coinDescription)
+                        .lineLimit(showFullDescription ? nil : 3)
+                        .font(.callout)
+                        .foregroundColor(Color.theme.secondaryText)
+                    
+                    Button(action: {
+                        withAnimation(.easeInOut) {
+                            HapticManager.instance.notification(type: .success)
+                            HapticManager.instance.impact(style: .heavy)
+                            showFullDescription.toggle()
+                        }
+                    }) {
+                        Text(showFullDescription ? "Less" : "Read more...")
+                            .font(.caption).bold()
+                            .padding(.vertical, 4)
+                    }
+                    .accentColor(.blue)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
     }
     private var overviewGrid: some View {
         LazyVGrid(
@@ -111,6 +145,40 @@ extension DetailView {
             CoinImageView(coin: vm.coin)
                 .frame(width: 25, height: 25)
         }
+    }
+    private var websiteSection: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            if
+                let websiteString = vm.websiteURL,
+                let url = URL(string: websiteString) {
+                Text("Website")
+                    .onTapGesture {
+                        HapticManager.instance.notification(type: .success)
+                        HapticManager.instance.impact(style: .heavy)
+                        websiteLink.toggle()
+                    }
+                    .fullScreenCover(isPresented: $websiteLink) {
+                        SafariService(url: url)
+                    }
+            }
+            
+            if
+                let redditString = vm.redditURL,
+                let url = URL(string: redditString) {
+                Text("Reddit")
+                    .onTapGesture {
+                        HapticManager.instance.notification(type: .success)
+                        HapticManager.instance.impact(style: .heavy)
+                        redditLink.toggle()
+                    }
+                    .fullScreenCover(isPresented: $redditLink) {
+                        SafariService(url: url)
+                    }
+            }
+        }
+        .foregroundColor(.blue)
+        .frame(maxWidth:. infinity, alignment: .leading)
+        .font(.headline)
     }
 }
 
