@@ -31,21 +31,9 @@ struct HomeView: View {
                 SearchBarView(searchText: $vm.searchText)
                 columnTitles
                 
-                if !showPortfolio {
-                    allCoinsList.transition(.move(edge: .leading))
-                }
-                if showPortfolio {
-                    ZStack(alignment: .top) {
-                        if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
-                            portfolioEmptyText
-                        } else if vm.portfolioCoins.count > 0 {
-                            portfolioCoinsList
-                        } else {
-                            Text("No Crypto Coin Found")
-                        }
-                    }
-                    .transition(.move(edge: .trailing))
-                }
+                //coinSectionUsingTransitions
+                coinSectionUsingOffsets
+                
                 Spacer(minLength: 0)
             }
             .sheet(isPresented: $showSettingsView) {
@@ -157,14 +145,50 @@ extension HomeView {
         .foregroundColor(Color.theme.secondaryText)
         .padding(.horizontal)
     }
+    private var coinSectionUsingTransitions: some View {
+        ZStack {
+            if !showPortfolio {
+                allCoinsList.transition(.move(edge: .leading))
+            }
+            if showPortfolio {
+                ZStack(alignment: .top) {
+                    if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                        portfolioEmptyText
+                    } else if vm.portfolioCoins.count > 0 {
+                        portfolioCoinsList
+                    } else {
+                        Text("No Crypto Coin Found")
+                    }
+                }
+                .transition(.move(edge: .trailing))
+            }
+        }
+    }
+    private var coinSectionUsingOffsets: some View {
+        ZStack(alignment: .top) {
+            allCoinsList
+                .offset(x: showPortfolio ? -UIScreen.main.bounds.width : 0)
+            
+            ZStack(alignment: .top) {
+                if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                    portfolioEmptyText
+                } else if vm.portfolioCoins.count > 0 {
+                    portfolioCoinsList
+                } else {
+                    Text("No Crypto Coin Found")
+                }
+            }
+            .offset(x: showPortfolio ? 0 : UIScreen.main.bounds.width)
+        }
+    }
+    
     private var allCoinsList: some View {
         List {
             ForEach(vm.allCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
-                    .onTapGesture {
-                        segue(coin: coin)
-                    }
+                    .onTapGesture {segue(coin: coin)}
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
@@ -177,9 +201,9 @@ extension HomeView {
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
-                    .onTapGesture {
-                        segue(coin: coin)
-                    }
+                    .onTapGesture {segue(coin: coin)}
+                    .listRowBackground(Color.theme.background)
+
             }
         }
         .listStyle(PlainListStyle())

@@ -28,16 +28,22 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                swiftfulThinkingSection
-                coinGeckoSection
-                developerSection
-                applicationSection
+            ZStack {
+                //background layer
+                Color.theme.background.ignoresSafeArea()
+                
+                //content layer
+                List {
+                    swiftfulThinkingSection
+                    coinGeckoSection
+                    developerSection
+                    applicationSection
+                        
+                }
+                .listRowBackground(Color.theme.background.opacity(0.5))
             }
             .font(.headline)
-            .fullScreenCover(item: $selectedModel) {
-                SafariService(url: $0.link)
-            }
+            .fullScreenCover(item: $selectedModel) { SafariService(url: $0.link) }
             .listStyle(GroupedListStyle())
             .navigationTitle("Settings")
             .toolbar {
@@ -56,6 +62,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .preferredColorScheme(.dark)
     }
 }
 
@@ -73,7 +80,7 @@ extension SettingsView {
                     .foregroundColor(Color.theme.accent)
             }
             .padding(.vertical)
-            
+                        
             Text("Subscribe on YouTube 🥳")
                 .foregroundColor(.blue)
                 .onTapGesture {
