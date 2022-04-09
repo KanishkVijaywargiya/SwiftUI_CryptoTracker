@@ -192,9 +192,7 @@ extension HomeView {
             }
         }
         .listStyle(PlainListStyle())
-        .refreshable {
-            vm.reloadData()
-        }
+        .refreshable {vm.reloadData()}
     }
     private var portfolioCoinsList: some View {
         List {
@@ -207,6 +205,7 @@ extension HomeView {
             }
         }
         .listStyle(PlainListStyle())
+        .refreshable {vm.reloadData()}
     }
     private var portfolioEmptyText: some View {
         Text("You haven't added any coins to your portfolio yet. Click the + button to get started! 🧐")
